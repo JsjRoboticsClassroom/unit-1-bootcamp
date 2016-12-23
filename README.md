@@ -2,7 +2,8 @@
 
 Instructions:
   - Fork and clone a copy of this repo.
-  - In each of the following sections, complete the exercises. Add your solutions to the specified `.java` file in the `/src` directory.
+  - In each of the following sections, complete the exercises.
+    Add your solutions to the specified `.java` file in the `/src` directory.
   - Bonus challanges are optional but encouraged!
 
 1. [Variables](exercises/variables.md)
