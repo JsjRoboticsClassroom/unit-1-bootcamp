@@ -58,7 +58,7 @@ public class ClassesAndObjects {
     return kitten.getName();
   }
 
-  //answer 5 : Adoption
+  //answer 5 : Adoption & Bonus
   public static void adoption(Cat cat, Person owner) {
     if (cat.getName().equals("Catwoman")) {
       System.out.println("Catwoman will never be anyone's pet!");
