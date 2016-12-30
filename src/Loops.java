@@ -41,7 +41,7 @@ public class Loops {
 
         //A12
         sumOfNNumbers(1);
-        sumOfNFibonacci(15);
+        sumOfNFibonacci(11);
 
         //sumNumbers
         System.out.println(sumNumbers("abc123xyz")); //123
@@ -139,41 +139,64 @@ public class Loops {
 
     //Q10
     public static void firstTenFibonacci() {
-        List<Integer> fibNumbers = new ArrayList<>(Arrays.asList(0, 1));
-        for (int i = 2; i < 10; i++) {
-            fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
+        List<Integer> fibNumbers = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+
+            switch (i) {
+                case 0:
+                case 1:
+                    fibNumbers.add(i);
+                    break;
+                default:
+                    fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
+            }
         }
         System.out.println(fibNumbers);
     }
 
     //Q11
     public static void sumOfTenFibonacci() {
-        List<Integer> fibNumbers = new ArrayList<>(Arrays.asList(0, 1));
-        int sum = 1; // sum of 2 existence elements in  the array
-        for (int i = 2; i < 10; i++) {
-            fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
-            sum += fibNumbers.get(i);
+        List<Integer> fibNumbers = new ArrayList<>();
+        int sum = 0;
+
+        for (int i = 0; i < 10; i++) {
+
+            switch (i) {
+                case 0:
+                case 1:
+                    fibNumbers.add(i);
+                    sum += fibNumbers.get(i);
+                    break;
+                default:
+                    fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
+                    sum += fibNumbers.get(i);
+            }
         }
         System.out.println(sum);
-
     }
+
 
     //Q12
     public static void sumOfNFibonacci(int n) {
-        if (n < 2) {
-            System.out.println(n);
-        } else {
-            List<Integer> fibNumbers = new ArrayList<>(Arrays.asList(0, 1));
-            int sum = 1;
-            for (int i = 2; i < n; i++) {
-                fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
-                sum += fibNumbers.get(i);
+        List<Integer> fibNumbers = new ArrayList<>();
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+
+            switch (i) {
+                case 0:
+                case 1:
+                    fibNumbers.add(i);
+                    sum += fibNumbers.get(i);
+                    break;
+                default:
+                    fibNumbers.add(i, (fibNumbers.get(i - 1) + fibNumbers.get(i - 2)));
+                    sum += fibNumbers.get(i);
             }
-            System.out.println(sum);
         }
-
+        System.out.println(sum);
     }
-
 
     /* Sum Numbers : Given a string, return the sum of the numbers appearing in the string,
      * ignoring all other characters. A number is a series of 1 or more digit chars in a row.
