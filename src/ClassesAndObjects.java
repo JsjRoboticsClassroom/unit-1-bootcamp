@@ -1,6 +1,5 @@
-/**
- * Created by alexandraqin on 4/14/15.
- */
+
+
 public class ClassesAndObjects {
 
   public static void main (String args[]) {
@@ -68,7 +67,7 @@ public class ClassesAndObjects {
 
   }
 
-  // answer 6: isFree
+  //answer 6: isFree
   public static boolean isFree ( Cat a){
     if(a.getOwner() !=null){
       return true;
@@ -77,7 +76,6 @@ public class ClassesAndObjects {
   }
 
   //answer 7: isSiblings
-
   public static boolean isSiblings(Cat a, Cat b) {
     if (a.getOwner() == null || b.getOwner() == null) {
       return false;

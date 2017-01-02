@@ -1,7 +1,6 @@
 import java.util.Random;
 
-/**
- */
+
 public class Methods {
     public static void main(String args[]) {
 
@@ -15,15 +14,13 @@ public class Methods {
         System.out.println(toLowerCase("Hello, World!"));
 
         //ans4
-        System.out.println(isMultiple(5,101));
+        System.out.println(isMultiple(5, 101));
 
         //ans5
         prettyInteger(4);
 
         //ans6
-        System.out.println(random(1,100));
-
-
+        System.out.println(random(1, 100));
 
 
     }
@@ -46,7 +43,7 @@ public class Methods {
 
     //question 4
     public static boolean isMultiple(int num1, int num2) {
-        if(num2>num1) {
+        if (num2 > num1) {
             if (num2 % num1 == 0) {
                 return true;
             }
@@ -57,24 +54,24 @@ public class Methods {
 
     //question5
 
-    public static void prettyInteger( int myInt){
-        String stars =" ";
-        for(int i = 0; i<myInt; i++){
-           stars += "*";
+    public static void prettyInteger(int myInt) {
+        String stars = " ";
+        for (int i = 0; i < myInt; i++) {
+            stars += "*";
         }
-        System.out.println(stars+" "+myInt+stars);
+        System.out.println(stars + " " + myInt + stars);
     }
 
     //question6
 
-    public static int random (int minValue, int maxValue){
+    public static int random(int minValue, int maxValue) {
         Random rand = new Random();
-        if (!(maxValue > minValue)){
+        if (!(maxValue > minValue)) {
             int temp = maxValue;
-            maxValue =minValue;
-            minValue =temp;
+            maxValue = minValue;
+            minValue = temp;
         }
-        return (rand.nextInt(maxValue - minValue +1) + minValue);
+        return (rand.nextInt(maxValue - minValue + 1) + minValue);
     }
 
 }

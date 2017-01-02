@@ -4,9 +4,7 @@ import com.sun.tools.hat.internal.util.ArraySorter;
 import java.lang.reflect.Array;
 import java.util.*;
 
-/**
- * Created by alexandraqin on 4/14/15.
- */
+
 public class DataStructures {
 
     public static void main(String args[]) {
@@ -50,7 +48,6 @@ public class DataStructures {
         System.out.println(wordsWithoutList(strArr1, 1)); // {"bb", "ccc"}
         System.out.println(wordsWithoutList(strArr2, 3)); // {"a", "bb", "b"}
         System.out.println(wordsWithoutList(strArr3, 4)); //{"a", "bb", "b", "ccc"}
-
 
         //A7 Sorting Sentence
         sortingSentence("Hello, are you there");
@@ -98,7 +95,6 @@ public class DataStructures {
         return returnList;
     }
 
-
     //Q7. Sorting sentences
     public static void sortingSentence(String sentence) {
         List<String> wordList = Arrays.asList(sentence.split(" "));
@@ -111,5 +107,6 @@ public class DataStructures {
             }
         }
     }
+
 }
 
